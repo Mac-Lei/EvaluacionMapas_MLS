@@ -41,10 +41,24 @@
 - *Impacto:* Al estar habilitada la depuración, se vuelve vulnerable y puede ser víctima de ataques. Representa un riesgo para la privacidad de los usuarios.
 - *Pasos de reproduccion:*
   1. Verificar que android:debuggable esté configurado en true en el archivo AndroidManifest.xml.
-  2. Construir el APK y ejecutarlo en un dispositivo
+  2. Construir el APK y ejecutarlo en un dispositivo.
   3. Conectar un depurador al dispositivo.
   4. Realizar la ingeniería inversa y rastreo de la aplicación.
 - *Correcciones:*
   1. Desactivar la depuración en el archivo AndroidManifest.xml.
   2. Revisar el archivo build.gradle.
+
+### 4. Se puede realizar una copia de seguridad de los datos de la aplicación [android:allowBackup=true]
+- *Descripcion:* Esta bandera permite a cualquiera hacer una copia de seguridad de los datos de su aplicación a través de adb. Permite a los usuarios que han habilitado la depuración USB copiar datos de la aplicación fuera del dispositivo.
+- *Gravedad:* Medium
+- *Impacto:* Al estar habilitada, los usuarios pueden extraer datos confidenciales de la aplicación y cualquier dato que pueda comprometer la seguridad del usuario.
+- *Pasos de reproduccion:*
+  1. Verificar que android:allowBackup esté configurado en true en el archivo AndroidManifest.xml.
+  2. Habilitar la depuración USB en un dispositivo.
+  3. Conectar el dispositivo a una máquina con adb instalado.
+  4. Ejecutar el comando de copia de seguridad de la aplicación.
+  5. Restaurar la copia de seguridad en otro dispositivo.
+- *Correcciones:*
+  1. Deshabilitar la copia de seguridad en el archivo AndroidManifest.xml.
+  2. Probar la aplicación con la configuración corregida.
 
