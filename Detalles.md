@@ -28,4 +28,4 @@ contra vulnerabilidades comunes.
 4. Asegurarse de que los permisos necesarios están configurados 
 
 ## Reporte de Vulnerabilidades 
-El reporte detallado de las pruebas de vulnerabilidad realizadas se encuentra en el archivo `vulnerability_report.pdf`.
+El reporte detallado de las pruebas de vulnerabilidad realizadas se encuentra en el archivo [vulnerability_report.pdf](vulnerability_report.pdf)
