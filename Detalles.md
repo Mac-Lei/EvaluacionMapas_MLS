@@ -4,7 +4,7 @@ Este proyecto es una aplicación Android que implementa medidas de seguridad par
 contra vulnerabilidades comunes. 
 
 ## Vulnerabilidades Identificadas
-- Aplicaciín firmada con certificado de depuración
+- Aplicación firmada con certificado de depuración
 - La aplicación se puede instalar en una versión vulnerable de Android actualizada Android 7.0, [minSdk=24]
 - Depuración habilitada para la aplicación [Android: depurable = verdadero]
 - Se puede realizar una copia de seguridad de los datos de la aplicación [android:allowBackup=true]
