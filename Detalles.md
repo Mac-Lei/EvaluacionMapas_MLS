@@ -1,4 +1,4 @@
-# EvaluacionMAPAS_MLS
+# EvaluacionMapas_MLS
 # Descripción
 Este proyecto es una aplicación Android que implementa medidas de seguridad para proteger 
 contra vulnerabilidades comunes. 
