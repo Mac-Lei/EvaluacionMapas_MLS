@@ -11,3 +11,5 @@
 ## 3. Protección contra Ataques de Red (MITM)
 - **Descripción:** Se ha habilitado HTTPS para todas las comunicaciones y se ha implementado HSTS para forzar el uso de conexiones seguras.
 - **Cómo mejora la seguridad:** Esto protege los datos en tránsito contra ataques de intermediarios, asegurando que la información sensible no sea interceptada ni alterada durante su transmisión.
+
+Volver [Detalles ](Detalles.md)
