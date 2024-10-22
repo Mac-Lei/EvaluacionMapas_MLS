@@ -4,10 +4,8 @@
 
 ## Detalles de mejores prácticas
 ### 1. Deshabilitar la depuración en producción
-- *Descripción:*
-  1. Se debe asegurar que la opción android:debuggable esté configurada como false en el AndroidManifest.xml para las versiones de producción de la aplicación.
-- *Mejora de seguridad:*
-  1. Esto evita que atacantes puedan conectar un depurador y acceder a datos sensibles, lo que refuerza la seguridad de la aplicación.
+- **Descripción:** Se debe asegurar que la opción android:debuggable esté configurada como false en el AndroidManifest.xml para las versiones de producción de la aplicación.
+- **Mejora de seguridad:** Esto evita que atacantes puedan conectar un depurador y acceder a datos sensibles, lo que refuerza la seguridad de la aplicación.
 
 ### 2. Desactivar la copia de seguridad de datos
 - *Descripción:*
