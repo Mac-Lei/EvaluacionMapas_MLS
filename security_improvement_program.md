@@ -26,7 +26,7 @@ Las métricas que se utilizarán para medir la seguridad son:
 - Tasa de incidentes de seguridad reportados.
 - Satisfacción del usuario en relación a la seguridad de la aplicación.
 
-## 5. Plan de Acción para Futuras Mejoras de Seguridad
+## 5. Plan de acción para futuras mejoras de seguridad
 - Continuar monitoreando nuevas amenazas y vulnerabilidades en la aplicación.
 - Implementar tecnologías emergentes de seguridad como autenticación multifactor.
 - Revisar y actualizar la capacitación en seguridad para el equipo de desarrollo.
