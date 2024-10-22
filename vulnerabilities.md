@@ -75,3 +75,5 @@
   1. Verificar el nivel de protección del permiso.
   2. Cambiar android:exported a false si el receptor no necesita ser accesible externamente.
   3. Revisar y restringir los permisos de la aplicación.
+
+Volver [Detalles ](Detalles.md)
