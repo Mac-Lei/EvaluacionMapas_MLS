@@ -32,3 +32,4 @@ Las métricas que se utilizarán para medir la seguridad son:
 - Revisar y actualizar la capacitación en seguridad para el equipo de desarrollo.
 - Realizar simulacros de incidentes de seguridad para mejorar la respuesta del equipo.
 
+Volver [Detalles ](Detalles.md)
