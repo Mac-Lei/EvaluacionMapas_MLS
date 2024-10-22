@@ -39,3 +39,5 @@
 ### 10. Pruebas de seguridad y auditoría regular
 - **Descripción:** Se deben realizar pruebas de seguridad regulares, como pruebas de penetración y auditorías de código, para identificar y corregir vulnerabilidades.
 - **Mejora de seguridad:** Esto permite descubrir problemas de seguridad antes de que sean explotados, mejorando la seguridad general de la aplicación de manera proactiva.
+
+Volver [Detalles ](Detalles.md)
