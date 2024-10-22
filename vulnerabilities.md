@@ -62,3 +62,16 @@
   1. Deshabilitar la copia de seguridad en el archivo AndroidManifest.xml.
   2. Probar la aplicación con la configuración corregida.
 
+### 5. Broadcast Receiver (androidx.profileinstaller.ProfileInstallReceiver) está protegido por un permiso, pero se debe verificar el nivel de protección del permiso. Permiso: android.permission.DUMP [android: exportado = verdadero]
+- *Descripcion:*Se descubre que un receptor de transmisión se comparte con otras aplicaciones en el dispositivo, por lo que es accesible para cualquier otra aplicación en el dispositivo. Está protegido por un permiso que no está definido en la aplicación analizada. Como resultado, se debe verificar el nivel de protección del permiso donde está definido. Si se configura como normal o peligroso, una aplicación maliciosa puede solicitar y obtener el permiso e interactuar con el componente. Si está configurado en firma, sólo las aplicaciones firmadas con el mismo certificado pueden obtener el permiso.
+- *Gravedad:* Medium
+- *Impacto:* Si el nivel del permiso es bajo, se puede ser víctima de ataques de tipo man-in-the-middle, o ejecutar código no autorizado.
+- *Pasos de reproduccion:*
+  1. Verificar que el Broadcast Receiver esté configurado con android:exported=true.
+  2. Verificar el nivel de protección del permiso android.permission.DUMP.
+  3. Instalar una aplicación maliciosa en el dispositivo.
+  4. Interceptar o manipular la transmisión.
+- *Correcciones:*
+  1. Verificar el nivel de protección del permiso.
+  2. Cambiar android:exported a false si el receptor no necesita ser accesible externamente.
+  3. Revisar y restringir los permisos de la aplicación.
