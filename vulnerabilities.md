@@ -34,3 +34,17 @@
   1. Cambiar la versión mínima de SDK (minSdkVersion) a 29 o superior en el archivo build.gradle.
   2. Sersiorarse que las dependencias sean compatibles con la nueva configuración de SDK.
   3. Realizar pruebas en dispositivos con Android 10 (API 29) o superior para confirmar la seguridad y estabilidad de la aplicación.
+
+### 3. Depuración habilitada para la aplicación [Android: depurable = verdadero]
+- *Descripcion:* La depuración se habilitó en la aplicación, lo que facilita a los ingenieros inversos conectarle un depurador. Esto permite volcar un seguimiento de la pila y acceder a clases auxiliares de depuración.
+- *Gravedad:* Alta
+- *Impacto:* Al estar habilitada la depuración, se vuelve vulnerable y puede ser víctima de ataques. Representa un riesgo para la privacidad de los usuarios.
+- *Pasos de reproduccion:*
+  1. Verificar que android:debuggable esté configurado en true en el archivo AndroidManifest.xml.
+  2. Construir el APK y ejecutarlo en un dispositivo
+  3. Conectar un depurador al dispositivo.
+  4. Realizar la ingeniería inversa y rastreo de la aplicación.
+- *Correcciones:*
+  1. Desactivar la depuración en el archivo AndroidManifest.xml.
+  2. Revisar el archivo build.gradle.
+
