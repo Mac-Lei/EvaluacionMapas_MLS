@@ -12,7 +12,7 @@
 - **Descripción:** Aplicación firmada con un certificado de depuración. La aplicación de producción no debe enviarse con un certificado de depuración.
 - **Gravedad:** Alta
 - **Impacto:** Las aplicaciones firmadas con este certificado no son seguras. Las tiendas de aplicaciones no aceptan una aplicación que esté firmada con un certificado de depuración.
-- **Pasos de reproduccion:**
+- **Pasos de reproducción:**
   1. Generar una clave de firma de producción.
   2. Crear o seleccionar un Key Store de producción.
   3. Verificar la firma de la aplicación mediante un comando como apksigner verify --verbose  print-certs app.apk.
@@ -25,7 +25,7 @@
 - **Descripción:** Esta aplicación se puede instalar en una versión anterior de Android que tiene múltiples vulnerabilidades no corregidas. Estos dispositivos no recibirán actualizaciones de seguridad razonables de Google. Admite una versión de Android => 10, API 29 para recibir actualizaciones de seguridad razonables.
 - **Gravedad:** Alta
 - **Impacto:** Los usuarios están expuestos a posibles ataques de seguridad, comprometiendo sus datos.
-- **Pasos de reproduccion:**
+- **Pasos de reproducción:**
   1. Configurar minSdkVersion igual o menor a 24 en el archivo build.gradle.
   2. Construir y generar un APK con la configuración de minSdkVersion.
   3. Instalar el APK en un dispositivo con Android 7.0 (PI 24).
@@ -39,7 +39,7 @@
 - **Descripción:** La depuración se habilitó en la aplicación, lo que facilita a los ingenieros inversos conectarle un depurador. Esto permite volcar un seguimiento de la pila y acceder a clases auxiliares de depuración.
 - **Gravedad:** Alta
 - **Impacto:** Al estar habilitada la depuración, se vuelve vulnerable y puede ser víctima de ataques. Representa un riesgo para la privacidad de los usuarios.
-- **Pasos de reproduccion:**
+- **Pasos de reproducción:**
   1. Verificar que android:debuggable esté configurado en true en el archivo AndroidManifest.xml.
   2. Construir el APK y ejecutarlo en un dispositivo.
   3. Conectar un depurador al dispositivo.
@@ -52,7 +52,7 @@
 - **Descripción:** Esta bandera permite a cualquiera hacer una copia de seguridad de los datos de su aplicación a través de adb. Permite a los usuarios que han habilitado la depuración USB copiar datos de la aplicación fuera del dispositivo.
 - **Gravedad:** Medium
 - **Impacto:** Al estar habilitada, los usuarios pueden extraer datos confidenciales de la aplicación y cualquier dato que pueda comprometer la seguridad del usuario.
-- **Pasos de reproduccion:**
+- **Pasos de reproducción:**
   1. Verificar que android:allowBackup esté configurado en true en el archivo AndroidManifest.xml.
   2. Habilitar la depuración USB en un dispositivo.
   3. Conectar el dispositivo a una máquina con adb instalado.
@@ -66,7 +66,7 @@
 - **Descripción:** Se descubre que un receptor de transmisión se comparte con otras aplicaciones en el dispositivo, por lo que es accesible para cualquier otra aplicación en el dispositivo. Está protegido por un permiso que no está definido en la aplicación analizada. Como resultado, se debe verificar el nivel de protección del permiso donde está definido. Si se configura como normal o peligroso, una aplicación maliciosa puede solicitar y obtener el permiso e interactuar con el componente. Si está configurado en firma, sólo las aplicaciones firmadas con el mismo certificado pueden obtener el permiso.
 - **Gravedad:** Medium
 - *Impacto:* Si el nivel del permiso es bajo, se puede ser víctima de ataques de tipo man-in-the-middle, o ejecutar código no autorizado.
-- **Pasos de reproduccion:**
+- **Pasos de reproducción:**
   1. Verificar que el Broadcast Receiver esté configurado con android:exported=true.
   2. Verificar el nivel de protección del permiso android.permission.DUMP.
   3. Instalar una aplicación maliciosa en el dispositivo.
